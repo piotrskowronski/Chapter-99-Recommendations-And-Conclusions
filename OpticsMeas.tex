@@ -1,0 +1,56 @@
+\section{Optics measurements}
+
+\subsection{Emittance and Twiss parameters}
+
+Emittance and Twiss parameters measurements are naturally the key in 
+a single pass machine setup. In CTF3 they were done using quad-scan technique. 
+To obtain a precise measurement several pulses were recorded at each of the quad settings.
+Additionally, change of quadrupole setting is rather slow, especially if one would like to
+remove the hysteresis effect. In CTF3 measuring emittance for single plane took about 3 minutes.
+Measuring emittance behind the combiner ring for the beam making different number of turns,
+to observe the beta beating and emittance growth, was an over an hour task.
+Therefore, choosing the fastest technique is suggested.
+
+Additionally, the emittance measurements are also affected by dispersion.
+Adding a section where dispersion, and also orbit, can be corrected upfront 
+of the location of the emittance measurement is recommended.
+
+In CTF3 quad-scans were problematic if the measured beam had Twiss \textalpha~parameter 
+outside \textpm 3 in any of the planes. 
+In such case finding a range was very difficult because 
+covering sufficient phase advance range needed very strong quad settings, 
+which usually lead to too large beam size in the other plane and subsequent beam losses.
+In case quad-scans are also foreseen at CLIC and small \textalpha~parameter 
+can not be guaranteed at the measurement location then 
+additional quadrupoles should be added to guarantee sufficient measurement range.
+Additionally, we recommend installation of beam intensity monitor just in front
+of profile measurement screen to guarantee that no beam is lost during scan. 
+
+\subsection{Dispersion}
+
+Another key optics parameter that needs to be efficiently measured is dispersion.
+Because of the relatively large energy spread dispersion errors are the dominant 
+contribution for the emittance growth. Its error  modify $R_{56}$ of the transfer lines and lead to
+bunch length elongation. Therefore, as precise as possible measurement of dispersion is required.
+
+\subsection{Transfer Matrix and beta-beating}
+
+One of the first items that needs to be checked during commissioning is 
+agreement between the model and the actual machine optics.
+The basic tool is the response matrix measurement. 
+In CTF3 its more advanced and accurate version was used called Phase Space Painting (ref to PhSpP section).
+The orbits are changed using to consecutive orbit correctors. In order to avoid uncertainties associated 
+with transfer matrix between the correctors it is preferable they are separated by a drift space.
+These can be the same correctors which are used for orbit feedback, see~\ref{sec.Stability}. 
+Also, the BPMs used for the feedback allow to check that the orbits are painted as required.
+In other words, that there is no error in the corrector's excitation constants.
+The adequate software tools allowing for efficient measurements and analysis need to be prepared for the commissioning.
+
+Measurement and correction of the optics in the rings poses additional challenges
+because in case of non-zero chromaticity and large energy spread the excited orbits are quickly damped to
+the closed orbit. Additionally, the beam energy is decreasing due to the synchrotron radiation.
+For the same reasons measurement of the tunes is difficult.
+Providing a possibility to store the beam in the rings during the commissioning by installing a small
+accelerating cavity would tremendously facilitate the process because all the very accurate techniques
+routinely used in the circular accelerators could employed. They offer sub percent accuracy, which is 
+otherwise would be very difficult to reach. 

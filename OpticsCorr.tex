@@ -1,0 +1,13 @@
+\section{Combined corrections}
+
+One of the difficulties encountered in the optics correction in CTF3 was 
+the interplay between different properties:
+\begin{itemize}
+\item orbit
+\item dispersion
+\item emittance and Twiss parameters
+\end{itemize}
+Subsequent implementation of the corrections on each of the parameters was rarely converging
+to a fully satisfactory values: the parameter in question was corrected but the other two
+got spoiled. A possible solution, which unfortunately was never tried in CTF3,
+is to perform a global correction aiming to correct all these parameters simultaneously.

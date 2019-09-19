@@ -1,14 +1,27 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
+\documentclass[]{ctfreport} %ctfreport.cls
 
-\title{Chapter 99 Recommendations And Conclusions}
-\author{Piotr Skowronski}
-\date{September 2019}
+\usepackage{biblatex}
+\addbibresource{bibliography.bib}
+
 
 \begin{document}
 
-\maketitle
+\newpage
 
-\section{Introduction}
+ \input{intro}
+%Add here more of your chapter files (for single chapter generation)
+ \input{OpticsMeas}   % OpticsMeas.tex
+ \input{OpticsCorr}   % OpticsCorr.tex
+ \input{Stability}    % Stability.tex
+ \input{Others}       % Others.tex
+
+
+ \input{Conclusions}       % Conclusions.tex
+
+
+
+\newpage 
+\printbibliography[title={References}]
+
 
 \end{document}

@@ -1,0 +1,109 @@
+\section{Stability} 
+\label{sec.Stability}
+
+The CLIC stability requirements are very stringent what is reflected 
+in the hardware specifications. However, in CTF3 several unexpected
+effects were discovered, for example influence of electromagnetic noise, 
+drifts caused by ambient temperature effects due to seasonal weather changes
+or long time to return to a steady state after a device trip. 
+Naturally, one would prefer to solve these 
+issues by improving the hardware, better insulation or 
+adaptations of cooling and ventilation. However, these are usually 
+expensive in terms of time and cost. On the other hand, these drifts can be
+counteracted by adequate feed-back systems. CLIC hardware, control system and 
+instrumentation should forecast implementation of feedback systems on any
+sensitive item of the accelerator. It implies not only to the closed loops on
+the hardware elements itself but also the beam based feedbacks. 
+This is because the measurement devices are often also prone to drifts, 
+what is specially true for the RF power and phase measurements.
+Their calibration is very sensitive to temperature, electromagnetic noise 
+or grounding potential changes. For the last item one needs to keep in mind
+that the drive beam will be equipped with 1638 klystrons simultaneously
+discharging \textasciitilde 400~A beams into their collectors, which are than directed
+into the grounding cables. Its effect, and also coupling to the RF power flowing 
+through neighboring waveguides, was observed on the RF measurements at CTF3.
+It is unlikely that they can be fully insulated, although it would be very desirable,
+therefore beam based measurements should be available with sufficient sensitivity
+to provide input for drift analysis and for the feedbacks. 
+
+Fast detection and determination of the drift and jitter sources is also paramount.
+Therefore, the control system should allow for logging of all the signals.
+If the recording of all the pulse shapes turns out to be too demanding for the control system then
+at least a set of parameters that would allow to determine signal deviation from the reference signals 
+needs to be saved for each pulse. 
+In CTF3 mean and $\chi^2$ values were selected for that purpose and full traces were saved periodically every 10-20 minutes.
+What follows, the control system or a dedicated software application should enable possibility 
+to archive all the machine and beam signals plus all the settings at any time to save a machine state as a reference.
+In CTF3 the application that allowed for easy comparison between different archives and online measurements 
+turned out to be the main tool for machine operation and studies.
+
+A dedicated software application should online detect any drifts and 
+indicate to the operation a signal that needs to be corrected.
+Software for stability analysis of the gathered data should be made ready before the first beam
+as it will point to the devices that need to be further stabilized. 
+It is because machine that is drifting over time is impossible to tune 
+and reaching the required beam performance is impossible.
+
+It is very likely that many feedbacks loops will need to be deployed. 
+Therefore, a dedicated system (dedicated front-end computers and software framework) 
+should be prepared such that they can be easily implemented
+and integrated within the control environment.
+
+The following measurements need to be made available:
+\begin{enumerate}
+
+\item Drive beam injector instrumentation and RF stability: any beam parameter change at the exit of the injector
+      is strongly amplified by fully loaded acceleration, therefore special care needs to be taken in preparation of
+      the beam instrumentation in the injector. Beam current, position and phase plus bunch length should 
+      be monitored after each accelerating structure. Also beam loadings need to be measured with sufficient 
+      accuracy. Any cost saving in this area is likely to deteriorate significantly the machine performance. 
+      If possible, it is advised to use solutions providing redundant stability of the RF power for the injector.
+
+\item Beam loading: change of input power amplitude or phase modifies the beam loading,
+      therefore the amplitude at the output couplers needs to be measured with high enough accuracy
+      to detect 0.05$^\circ$ phase or 0.2\% amplitude change in the beam loading.
+
+\item Temperature measurements: as mentioned before, the temperature changes are likely to cause beam drifts.
+      Therefore, it is important to be able to correlate beam signals with the temperature and eventually
+      to implement adequate feedbacks. 
+
+\item Dispersion measurement: the CTF3 experience show that in the strong isochronous optics spurious dispersion
+      is very easily produced by relatively small orbit or magnet changes.      
+      Ability to monitor, and eventually correct, dispersion in an online manner would be definitely 
+      a huge advantage for the efficient machine operation. 
+
+\item Energy measurement: in CTF3 the most important beam jitter and drift was of the beam energy and 
+      it is very likely it will the case for CLIC. (explain why in the dedicated section). 
+      Additionally, the strong isochronous optics coupled with large energy spread 
+      does not leave any margin for energy errors.
+
+\item Emittance and Twiss parameters measurements: maintaining the emittance growth within the limit 
+      must be respected for lossless drive beam deceleration and correct functioning of CLIC.
+      Being able to observe the emittance drifts in an online manner in the most critical locations
+      will allow to understand their origin and eventually design a feedback mechanism. 
+      
+\end{enumerate}
+
+	
+Being obvious and very well covered by the CLIC studies, the orbit measurements are not the part of the list above.
+However, the orbit is also very likely to drift somewhat. 
+Because running DFS or DTS is rather time consuming, implementing a section for orbit feedback 
+in the most critical locations is suggested. This would require a section with 
+two BPMs separated by a distance big enough to measure orbit angle change with sufficient precision.
+It is suggested to place it before
+\begin{itemize}
+\item stretching and compressing chicanes
+\item the delay loop injection
+\item the combiner ring injection
+\item emittance measurement locations
+\item turn around loops
+\end{itemize}
+
+
+\subsection{Other possible items to mention}
+
+The beam stability after the first bend that the beam passed (TL1 bend or DL septa) was getting worse,
+even though the transmission and optic control was very good.
+One of the suspects ware tails that were visible in some measurements (energy spread, MTV profiles).
+On the other hand if the tails were static (the same from shot to shot) the would be lost at the same place 
+and would not affect the stability. \textbf{Can we conclude anything about need for colimation at different stages of the DB Complex?}
